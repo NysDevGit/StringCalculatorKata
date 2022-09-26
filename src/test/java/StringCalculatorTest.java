@@ -38,4 +38,13 @@ public class StringCalculatorTest {
 
         Assertions.assertEquals(3,sum);
     }
+
+    @Test
+    public void should_return_sum_when_there_are_two_numbers_in_input(){
+        StringCalculator stringCalculator = new StringCalculator();
+
+        int sum = stringCalculator.add("1,1");
+
+        Assertions.assertEquals(2,sum);
+    }
 }
