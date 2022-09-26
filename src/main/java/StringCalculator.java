@@ -1,12 +1,18 @@
 public class StringCalculator {
     public int add(String input) {
-        if(input.isEmpty())
+        if (input.isEmpty())
             return 0;
-        if(input.length() == 1)
-            return Integer.parseInt(input);
         else {
             String[] numbers = input.split(",");
-            return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+            return getSumOf(numbers);
         }
+    }
+
+    private int getSumOf(String[] numbers) {
+        var sum = 0;
+        for (String number : numbers) {
+            sum += Integer.parseInt(number);
+        }
+        return sum;
     }
 }
