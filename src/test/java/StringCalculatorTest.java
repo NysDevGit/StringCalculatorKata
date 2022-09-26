@@ -74,4 +74,13 @@ public class StringCalculatorTest {
 
         Assertions.assertEquals(14,sum);
     }
+
+    @Test
+    public void should_return_sum_when_there_are_two_separators(){
+        StringCalculator stringCalculator = new StringCalculator();
+
+        int sum = stringCalculator.add("1\n2,3");
+
+        Assertions.assertEquals(6,sum);
+    }
 }
