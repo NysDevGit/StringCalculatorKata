@@ -47,4 +47,31 @@ public class StringCalculatorTest {
 
         Assertions.assertEquals(2,sum);
     }
+
+    @Test
+    public void should_return_sum_when_there_are_three_numbers_in_input(){
+        StringCalculator stringCalculator = new StringCalculator();
+
+        int sum = stringCalculator.add("1,1,3");
+
+        Assertions.assertEquals(5,sum);
+    }
+
+    @Test
+    public void should_return_sum_when_there_are_four_numbers_in_input(){
+        StringCalculator stringCalculator = new StringCalculator();
+
+        int sum = stringCalculator.add("1,1,3,4");
+
+        Assertions.assertEquals(9,sum);
+    }
+
+    @Test
+    public void should_return_sum_when_there_are_fiveour_numbers_in_input(){
+        StringCalculator stringCalculator = new StringCalculator();
+
+        int sum = stringCalculator.add("1,1,3,4,5");
+
+        Assertions.assertEquals(14,sum);
+    }
 }
